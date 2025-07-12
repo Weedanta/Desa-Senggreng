@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import ComingSoonText from "@/assets/images/comingsoon.svg";
-import BackgroundComingSoon from "@/assets/images/bg-home.svg";
+import BackgroundComingSoon from "@/assets/images/bg-home.png";
 import logo from "@/assets/images/logo.svg";
 import { motion } from "framer-motion";
 
