@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import ComingSoonText from "@/app/assets/images/comingsoon.svg";
-import BackgroundComingSoon from "@/app/assets/images/bg-home.svg";
-import logo from "@/app/assets/images/logo.svg";
+import ComingSoonText from "@/assets/images/comingsoon.svg";
+import BackgroundComingSoon from "@/assets/images/bg-home.svg";
+import logo from "@/assets/images/logo.svg";
 import { motion } from "framer-motion";
 
 export default function Home() {
