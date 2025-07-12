@@ -16,6 +16,7 @@ export default function Home() {
           className="absolute inset-0 object-cover w-full h-full z-0"
           priority
           draggable={false}
+          fill
         />
         <div className="absolute flex flex-col justify-center gap-4 items-center pb-20">
           <motion.div
@@ -37,18 +38,20 @@ export default function Home() {
               className="w-full h-auto"
               width={200}
               height={200}
+              priority
             />
           </motion.div>
 
+          {/* COMING SOON TEXT BERNAFAS */}
           <motion.div
             className="z-20 w-[75%]"
             animate={{
-              scale: [1, 1.02, 1], 
+              scale: [1, 1.02, 1],
             }}
             transition={{
-              duration: 3, 
+              duration: 3,
               repeat: Infinity,
-              ease: "easeInOut", 
+              ease: "easeInOut",
             }}
             whileHover={{ 
               scale: 1.05,
@@ -59,6 +62,8 @@ export default function Home() {
               alt="Coming Soon"
               src={ComingSoonText}
               className="w-full h-auto"
+              width={800} 
+              height={200}
             />
           </motion.div>
         </div>
