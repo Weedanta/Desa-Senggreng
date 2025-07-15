@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -26,3 +27,7 @@ body {
 }
 
 @layer utilities {}
+
+.mycontainer {
+  @apply container right-0 left-0 mx-auto lg:px-8 md:px-28 px-8 xl:px-24 transition-all duration-300;
+}
