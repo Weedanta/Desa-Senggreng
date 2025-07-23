@@ -56,7 +56,7 @@ const NavigationSection: React.FC<{
         <li key={index}>
           <a
             href={item.href}
-            className="text-white hover:text-white-600 hover:underline hover:underline-offset-2  font-semibold transition-colors duration-200 text-lg"
+            className="text-white hover:text-white-600 hover:underline hover:underline-offset-2 font-medium transition-colors duration-200 text-lg"
           >
             {item.label}
           </a>
@@ -141,7 +141,7 @@ export const Footer: React.FC<FooterProps> = ({
   return (
     <section>
     <footer className={`bg-gradient-to-br from-green-400 via-blue-500 to-blue-600 ${className}`}>
-      <div className="mx-auto container py-20">
+      <div className="mx-auto mycontainer py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <LogoSection
             logoSrc={logoSrc}
