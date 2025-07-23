@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import TentangContainer from "@/shared/tentang/container/TentangContainer";
 
 const page = () => {
-  return (
-    <div className='h-screen bg-white'></div>
-  )
-}
+  return <TentangContainer/>
+};
 
-export default page
+export default page;

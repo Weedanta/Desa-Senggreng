@@ -148,7 +148,7 @@ export const NavbarComponent = ({
                           onClick={onMobileMenuClose}
                           className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
                             item.isActive
-                              ? "bg-gradient-to-r from-[#007EE8] to-[#66E077] bg-clip-text text-transparent bg-blue-50"
+                              ? "bg-gradient-to-r from-[#007EE8] to-[#66E077] bg-clip-text text-transparent"
                               : "text-gray-700 hover:bg-gray-50 hover:bg-gradient-to-r hover:from-[#007EE8] hover:to-[#66E077] hover:bg-clip-text hover:text-transparent"
                           }`}
                         >
