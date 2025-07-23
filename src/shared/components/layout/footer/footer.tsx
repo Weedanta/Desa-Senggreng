@@ -1,17 +1,18 @@
 "use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { FooterProps, NavigationItem, ContactInfo } from './Footer.types';
-import Logo from '@/assets/images/layout/logo.png';
+import React from "react";
+import Image from "next/image";
+import { FooterProps, NavigationItem, ContactInfo } from "./Footer.types";
+import Logo from "@/assets/images/layout/logo.png";
+import IG from "@/assets/images/layout/social-media/ig.svg";
+import TELP from "@/assets/images/layout/social-media/telp.svg";
+import MAIL from "@/assets/images/layout/social-media/mail.svg";
 
-const FooterSection: React.FC<{ children: React.ReactNode; className?: string }> = ({ 
-  children, 
-  className = "" 
-}) => (
-  <div className={`flex flex-col ${className}`}>
-    {children}
-  </div>
+const FooterSection: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+}> = ({ children, className = "" }) => (
+  <div className={`flex flex-col ${className}`}>{children}</div>
 );
 
 const LogoSection: React.FC<{
@@ -23,21 +24,12 @@ const LogoSection: React.FC<{
     <div className="flex items-center gap-4">
       {logoSrc && (
         <div className="w-36 h-44 relative">
-          <Image
-            src={Logo}
-            alt="Logo Desa"
-            fill
-            className="object-contain"
-          />
+          <Image src={Logo} alt="Logo Desa" fill className="object-contain" />
         </div>
       )}
-      <div className='space-y-0.5'>
-        <h2 className="text-2xl font-bold text-white font-sans" >
-          {desaName}
-        </h2>
-        <p className="text-lg font-medium text-white">
-          {websiteSubtitle}
-        </p>
+      <div className="space-y-0.5">
+        <h2 className="text-2xl font-bold text-white font-sans">{desaName}</h2>
+        <p className="text-lg font-medium text-white">{websiteSubtitle}</p>
       </div>
     </div>
   </FooterSection>
@@ -48,9 +40,7 @@ const NavigationSection: React.FC<{
   items: NavigationItem[];
 }> = ({ title, items }) => (
   <FooterSection>
-    <h3 className="text-xl font-bold font-sans text-white mb-4">
-      {title}
-    </h3>
+    <h3 className="text-xl font-semibold font-sans text-white mb-4">{title}</h3>
     <ul className="space-y-2">
       {items.map((item, index) => (
         <li key={index}>
@@ -71,45 +61,32 @@ const ContactSection: React.FC<{
   contact: ContactInfo;
 }> = ({ title, contact }) => (
   <FooterSection>
-    <h3 className="text-xl font-bold font-sans text-white mb-4">
-      {title}
-    </h3>
+    <h3 className="text-xl font-semibold font-sans text-white mb-4">{title}</h3>
     <div className="space-y-3">
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-          <span className="text-blue-600 text-sm font-bold">📷</span>
-        </div>
-        <span className="text-white/80 text-lg">
-          @{contact.instagram}
-        </span>
+        <Image src={IG} alt="Instagram" className="w-8 h-8" />
+
+        <span className="text-white text-base">@{contact.instagram}</span>
       </div>
-      
+
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-          <span className="text-blue-600 text-sm">📞</span>
-        </div>
-        <span className="text-white/80 text-lg">
-          {contact.phone}
-        </span>
+        <Image src={TELP} alt="Phone" className="w-8 h-8" />
+        <span className="text-white text-base">{contact.phone}</span>
       </div>
-      
+
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-          <span className="text-blue-600 text-sm">✉️</span>
-        </div>
-        <span className="text-white/80 text-lg break-all">
-          {contact.email}
-        </span>
+        <Image src={MAIL} alt="Email" className="w-8 h-8" />
+        <span className="text-white text-base break-all">{contact.email}</span>
       </div>
     </div>
   </FooterSection>
 );
 
 const CreditSection: React.FC = () => (
-  <div className="text-center py-4 border-t bg-white border-white/20 font-sans">
+  <div className="text-center py-2 border-t bg-white border-white/20 font-sans">
     <p className="text-gray-800 text-sm">
-      Made with ❤️ by{' '}
-      <span className="font-semibold text-primary-500">
+      Made with ❤️ by{" "}
+      <span className="font-semibold text-primary-600">
         MMD Filkom Kelompok 51
       </span>
     </p>
@@ -119,49 +96,46 @@ const CreditSection: React.FC = () => (
 export const Footer: React.FC<FooterProps> = ({
   navigation = [],
   contact = {
-    instagram: 'pemdesasenggreng',
-    phone: '085880530435',
-    email: 'senggreng.sumberpucung@malangkab.go.id'
+    instagram: "pemdesasenggreng",
+    phone: "085880530435",
+    email: "senggreng.sumberpucung@malangkab.go.id",
   },
-  logoSrc = '/images/logo-desa.png',
-  desaName = 'DESA Senggreng',
-  websiteSubtitle = 'Website Wisata Desa Senggreng',
-  className = ''
+  logoSrc = "/images/logo-desa.png",
+  desaName = "DESA Senggreng",
+  websiteSubtitle = "Website Wisata Desa Senggreng",
+  className = "",
 }) => {
   const defaultNavigation: NavigationItem[] = [
-    { label: 'Beranda', href: '/' },
-    { label: 'Tentang', href: '/tentang' },
-    { label: 'Wisata', href: '/wisata' },
-    { label: 'UMKM', href: '/umkm' },
-    { label: 'Galeri', href: '/galeri' }
+    { label: "Beranda", href: "/" },
+    { label: "Tentang", href: "/tentang" },
+    { label: "Wisata", href: "/wisata" },
+    { label: "UMKM", href: "/umkm" },
+    { label: "Galeri", href: "/galeri" },
   ];
 
-  const footerNavigation = navigation.length > 0 ? navigation : defaultNavigation;
+  const footerNavigation =
+    navigation.length > 0 ? navigation : defaultNavigation;
 
   return (
     <section>
-    <footer className={`bg-gradient-to-br from-green-400 via-blue-500 to-blue-600 ${className}`}>
-      <div className="mx-auto mycontainer py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <LogoSection
-            logoSrc={logoSrc}
-            desaName={desaName}
-            websiteSubtitle={websiteSubtitle}
-          />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <NavigationSection
-            title="Navigasi"
-            items={footerNavigation}
-          />
-          <ContactSection
-            title="Kontak Pelayanan"
-            contact={contact}
-          />
+      <footer
+        className={`bg-gradient-to-br from-secondary-600 via-primary-700 to-primary-700 ${className}`}
+      >
+        <div className="mx-auto mycontainer py-28">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <LogoSection
+              logoSrc={logoSrc}
+              desaName={desaName}
+              websiteSubtitle={websiteSubtitle}
+            />
+            <div className="grid grid-cols-1 md:grid-cols-2">
+              <NavigationSection title="Navigasi" items={footerNavigation} />
+              <ContactSection title="Kontak Pelayanan" contact={contact} />
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
-    </footer>
-        <CreditSection />
+      </footer>
+      <CreditSection />
     </section>
   );
 };
