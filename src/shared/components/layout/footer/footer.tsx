@@ -24,7 +24,7 @@ const LogoSection: React.FC<{
     <div className="flex items-center gap-4">
       {logoSrc && (
         <div className="w-36 h-44 relative">
-          <Image src={Logo} alt="Logo Desa" fill className="object-contain" />
+          <Image src={Logo} alt="Logo Desa" fill className="object-contain" draggable="false"/>
         </div>
       )}
       <div className="space-y-0.5">
@@ -64,18 +64,18 @@ const ContactSection: React.FC<{
     <h3 className="text-xl font-semibold font-sans text-white mb-4">{title}</h3>
     <div className="space-y-3">
       <div className="flex items-center gap-3">
-        <Image src={IG} alt="Instagram" className="w-8 h-8" />
+        <Image src={IG} alt="Instagram" className="w-8 h-8" draggable="false" />
 
         <span className="text-white text-base">@{contact.instagram}</span>
       </div>
 
       <div className="flex items-center gap-3">
-        <Image src={TELP} alt="Phone" className="w-8 h-8" />
+        <Image src={TELP} alt="Phone" className="w-8 h-8" draggable="false"/>
         <span className="text-white text-base">{contact.phone}</span>
       </div>
 
       <div className="flex items-center gap-3">
-        <Image src={MAIL} alt="Email" className="w-8 h-8" />
+        <Image src={MAIL} alt="Email" className="w-8 h-8" draggable="false"/>
         <span className="text-white text-base break-all">{contact.email}</span>
       </div>
     </div>
@@ -121,14 +121,14 @@ export const Footer: React.FC<FooterProps> = ({
       <footer
         className={`bg-gradient-to-br from-secondary-600 via-primary-700 to-primary-700 ${className}`}
       >
-        <div className="mx-auto mycontainer py-28">
+        <div className="mx-auto mycontainer py-12 md:py-28 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <LogoSection
               logoSrc={logoSrc}
               desaName={desaName}
               websiteSubtitle={websiteSubtitle}
             />
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-0 gap-8">
               <NavigationSection title="Navigasi" items={footerNavigation} />
               <ContactSection title="Kontak Pelayanan" contact={contact} />
             </div>
