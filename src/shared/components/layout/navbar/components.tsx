@@ -2,8 +2,8 @@
 
 import { X, Menu } from "lucide-react";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import type { NavbarComponentProps, MobileMenuProps, NavItem } from "./types";
+import { useEffect } from "react";
+import type { NavbarComponentProps, NavItem } from "./types";
 import Title from "@/assets/images/layout/title.svg";
 import LogoDe from "@/assets/images/layout/logo.png";
 import Image from "next/image";
