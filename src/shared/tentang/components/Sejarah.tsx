@@ -1,11 +1,13 @@
 import SectionHeader from "@/shared/components/section/section";
+import Image from "next/image";
 import React from "react";
+import Line from "@/assets/images/tentang/line.svg";
 
 const Sejarah = () => {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
       <SectionHeader title="Sejarah">
-        <div className="text-xl flex flex-col gap-6 text-justify text-primary-800 mb-12">
+        <div className="text-xl md:text-2xl lg:text-3xl flex flex-col gap-6 text-justify text-primary-800 pb-12 lg:pb-4 w-full">
           <p>
             Jauh sebelum desa ini ramai, awalnya Senggreng adalah hutan lebat
             yang belum terjamah manusia. Dalam istilah Jawa, kawasan ini disebut
@@ -40,6 +42,14 @@ const Sejarah = () => {
             warga yang tinggal di dusun dan bagi siapa saja yang ingin mencari
             keberkahan.
           </p>
+        </div>
+        <div className="flex justify-center">
+          <Image
+            src={Line}
+            alt="Line"
+            className="h-auto object-cover"
+            draggable={false}
+          />
         </div>
       </SectionHeader>
     </div>

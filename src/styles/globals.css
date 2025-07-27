@@ -51,15 +51,27 @@
   --white-700: #a3a3a3;
   --white-800: #747474;
   --white-900: #515151;
-
-  
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  
+  /* ✅ Font Family - Poppins sebagai default */
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
+  
+  /* ✅ Font Weights - Poppins weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
   
   /* Primary Color Scale */
   --color-primary-50: var(--primary-50);
@@ -108,11 +120,6 @@
   --color-white-700: var(--white-700);
   --color-white-800: var(--white-800);
   --color-white-900: var(--white-900);
-
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -122,13 +129,61 @@
   }
 }
 
+/* ✅ Base styles dengan Poppins */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  font-weight: var(--font-weight-normal);
 }
 
-@layer utilities {}
+/* ✅ Typography dengan Poppins */
+h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
+  font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* ✅ Font Weight Utilities */
+@layer utilities {
+  .font-poppins {
+    font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  }
+  
+  .font-thin {
+    font-weight: var(--font-weight-thin);
+  }
+  
+  .font-extralight {
+    font-weight: var(--font-weight-extralight);
+  }
+  
+  .font-light {
+    font-weight: var(--font-weight-light);
+  }
+  
+  .font-normal {
+    font-weight: var(--font-weight-normal);
+  }
+  
+  .font-medium {
+    font-weight: var(--font-weight-medium);
+  }
+  
+  .font-semibold {
+    font-weight: var(--font-weight-semibold);
+  }
+  
+  .font-bold {
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .font-extrabold {
+    font-weight: var(--font-weight-extrabold);
+  }
+  
+  .font-black {
+    font-weight: var(--font-weight-black);
+  }
+}
 
 .mycontainer {
   @apply container right-0 left-0 mx-auto lg:px-8 md:px-28 px-8 xl:px-0 transition-all duration-300;
