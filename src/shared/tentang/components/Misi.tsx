@@ -1,13 +1,13 @@
-"use client"
-import type React from "react"
-import { motion } from "framer-motion"
-import { useMisi } from "../hooks/useMisi"
-import type { MisiProps } from "../types/misi.types"
-import SectionHeader from "@/shared/components/section/section"
+"use client";
+import type React from "react";
+import { motion } from "framer-motion";
+import { useMisi } from "../hooks/useMisi";
+import type { MisiProps } from "../types/misi.types";
+import SectionHeader from "@/shared/components/section/section";
 
 const Misi: React.FC<MisiProps> = ({ items, className }) => {
-  const { misiItems, loading } = useMisi()
-  const displayItems = items || misiItems
+  const { misiItems, loading } = useMisi();
+  const displayItems = items || misiItems;
 
   // Animation variants
   const containerVariants = {
@@ -19,7 +19,7 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: {
@@ -33,10 +33,10 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier easing
+        ease: [0.25, 0.46, 0.45, 0.94] as const, // Cast as const for cubic-bezier
       },
     },
-  }
+  };
 
   const skeletonVariants = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -45,10 +45,10 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
       scale: 1,
       transition: {
         duration: 0.3,
-        ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier easing
+        ease: [0.25, 0.46, 0.45, 0.94] as const, // Cast as const for cubic-bezier
       },
     },
-  }
+  };
 
   const numberVariants = {
     hover: {
@@ -56,10 +56,10 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
       color: "#0052A3",
       transition: {
         duration: 0.2,
-        ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier easing
+        ease: [0.25, 0.46, 0.45, 0.94] as const, // Cast as const for cubic-bezier
       },
     },
-  }
+  };
 
   if (loading && !items) {
     return (
@@ -81,7 +81,7 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
           />
         ))}
       </motion.div>
-    )
+    );
   }
 
   return (
@@ -118,7 +118,7 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
               transition={{
                 delay: index * 0.1 + 0.3,
                 duration: 0.5,
-                ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier easing
+                ease: [0.25, 0.46, 0.45, 0.94] as const, // Cast as const for cubic-bezier
               }}
             >
               {item.text}
@@ -138,7 +138,7 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
         }
       `}</style>
     </SectionHeader>
-  )
-}
+  );
+};
 
-export default Misi
+export default Misi;
