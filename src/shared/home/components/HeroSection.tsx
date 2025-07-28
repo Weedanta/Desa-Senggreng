@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      <div className="mycontainer py-24 sm:py-12 md:py-16 lg:py-20">
+    <section className="relative min-h-screen overflow-hidden flex justify-center items-center">
+      <div className="mycontainer ">
         <div className="flex flex-col-reverse lg:flex-row lg:justify-between gap-8 md:gap-12 lg:gap-16 items-center min-h-[70vh] lg:min-h-[80vh]">
           {/* Left Content */}
           <motion.div
@@ -19,7 +19,7 @@ export default function HeroSection() {
           >
             {/* Main Title */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gradient-1 md:pb-2"
+              className="w-fit text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gradient-1 md:pb-2"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
