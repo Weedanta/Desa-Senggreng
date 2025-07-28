@@ -1,4 +1,5 @@
 import type React from "react"
+
 export interface Testimonial {
   id: string
   name: string
