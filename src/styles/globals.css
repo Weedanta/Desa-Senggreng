@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  
+
   /* Primary Colors (Blue) */
   --primary-50: #e6f3ff;
   --primary-100: #b0dbff;
@@ -15,7 +15,7 @@
   --primary-700: #0063b5;
   --primary-800: #004c8c;
   --primary-900: #003a6b;
-  
+
   /* Secondary Colors (Green) */
   --secondary-50: #f0fcf1;
   --secondary-100: #d0f5d5;
@@ -27,7 +27,7 @@
   --secondary-700: #489f54;
   --secondary-800: #387b41;
   --secondary-900: #2b5e32;
-  
+
   /* Neutral Colors (Grey) */
   --neutral-50: #fafafa;
   --neutral-100: #f5f5f5;
@@ -39,7 +39,7 @@
   --neutral-700: #404040;
   --neutral-800: #262626;
   --neutral-900: #171717;
-  
+
   /* White Scale */
   --white-50: #fdfdfd;
   --white-100: #f7f7f7;
@@ -56,13 +56,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   /* ✅ Font Family - Poppins sebagai default */
   --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-poppins: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono);
-  
-  /* ✅ Font Weights - Poppins weights */
+
+  /* ✅ Font Weights - Definisi yang benar untuk Tailwind v4 */
   --font-weight-thin: 100;
   --font-weight-extralight: 200;
   --font-weight-light: 300;
@@ -72,7 +72,7 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
-  
+
   /* Primary Color Scale */
   --color-primary-50: var(--primary-50);
   --color-primary-100: var(--primary-100);
@@ -84,7 +84,7 @@
   --color-primary-700: var(--primary-700);
   --color-primary-800: var(--primary-800);
   --color-primary-900: var(--primary-900);
-  
+
   /* Secondary Color Scale */
   --color-secondary-50: var(--secondary-50);
   --color-secondary-100: var(--secondary-100);
@@ -96,7 +96,7 @@
   --color-secondary-700: var(--secondary-700);
   --color-secondary-800: var(--secondary-800);
   --color-secondary-900: var(--secondary-900);
-  
+
   /* Neutral Color Scale */
   --color-neutral-50: var(--neutral-50);
   --color-neutral-100: var(--neutral-100);
@@ -108,7 +108,7 @@
   --color-neutral-700: var(--neutral-700);
   --color-neutral-800: var(--neutral-800);
   --color-neutral-900: var(--neutral-900);
-  
+
   /* White Color Scale */
   --color-white-50: var(--white-50);
   --color-white-100: var(--white-100);
@@ -129,59 +129,33 @@
   }
 }
 
-/* ✅ Base styles dengan Poppins */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400; /* Gunakan nilai langsung, bukan CSS variable */
 }
 
-/* ✅ Typography dengan Poppins */
-h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select {
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* ✅ Font Weight Utilities */
 @layer utilities {
   .font-poppins {
     font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  }
-  
-  .font-thin {
-    font-weight: var(--font-weight-thin);
-  }
-  
-  .font-extralight {
-    font-weight: var(--font-weight-extralight);
-  }
-  
-  .font-light {
-    font-weight: var(--font-weight-light);
-  }
-  
-  .font-normal {
-    font-weight: var(--font-weight-normal);
-  }
-  
-  .font-medium {
-    font-weight: var(--font-weight-medium);
-  }
-  
-  .font-semibold {
-    font-weight: var(--font-weight-semibold);
-  }
-  
-  .font-bold {
-    font-weight: var(--font-weight-bold);
-  }
-  
-  .font-extrabold {
-    font-weight: var(--font-weight-extrabold);
-  }
-  
-  .font-black {
-    font-weight: var(--font-weight-black);
   }
 }
 
@@ -190,12 +164,35 @@ h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select {
 }
 
 .gradient-1 {
-  background: linear-gradient(90deg, #007EE8 0%, #66E077 100%);
+  background: linear-gradient(90deg, #007ee8 0%, #66e077 100%);
 }
 
 .text-gradient-1 {
-  background: linear-gradient(90deg, #007EE8 0%, #66E077 100%);
+  background: linear-gradient(90deg, #007ee8 0%, #66e077 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.font-medium {
+  font-weight: 500 !important;
+}
+
+.gradient-1 {
+  background: linear-gradient(90deg, #007ee8 0%, #66e077 100%);
+}
+
+.text-gradient-1 {
+  background: linear-gradient(90deg, #007ee8 0%, #66e077 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-custom {
+  background-image: url("/src/assets/images/Background.svg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  width: 100%;
 }

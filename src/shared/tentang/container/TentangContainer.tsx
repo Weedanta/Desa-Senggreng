@@ -5,7 +5,7 @@ import Sejarah from '../components/Sejarah'
 
 const TentangContainer = () => {
   return (
-    <section className='mycontainer bg-white'>
+    <section className='mycontainer bg-custom'>
       <Visi/>
       <Misi/>
       <Sejarah/>

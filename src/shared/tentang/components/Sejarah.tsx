@@ -5,7 +5,7 @@ import Line from "@/assets/images/tentang/line.svg";
 
 const Sejarah = () => {
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center">
       <SectionHeader title="Sejarah">
         <div className="text-xl md:text-2xl lg:text-3xl flex flex-col gap-6 text-justify text-primary-800 pb-12 lg:pb-4 w-full">
           <p>
