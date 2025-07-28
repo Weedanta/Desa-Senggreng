@@ -160,7 +160,7 @@ select {
 }
 
 .mycontainer {
-  @apply container right-0 left-0 mx-auto lg:px-8 md:px-28 px-8 xl:px-0 transition-all duration-300;
+  @apply container right-0 left-0 mx-auto lg:px-8 md:px-20 px-8 xl:px-0 transition-all duration-300;
 }
 
 .gradient-1 {
@@ -190,9 +190,11 @@ select {
 }
 
 .bg-custom {
-  background-image: url("/src/assets/images/Background.svg");
-  background-size: 100% auto;
-  background-position: center top;
+  background-image: url("/src/assets/images/Background.png");
+  background-size: cover; /* Menutupi seluruh container dengan proporsi tetap */
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: local; /* Background scroll dengan content */
   width: 100%;
+  min-height: 100%; /* Minimal setinggi container */
 }
