@@ -1,8 +1,9 @@
 import React from 'react'
+import UMKMContainer from '@/shared/umkm/container/UMKMContainer'
 
 const page = () => {
   return (
-    <div className='h-screen bg-white'></div>
+    <UMKMContainer/>
   )
 }
 
