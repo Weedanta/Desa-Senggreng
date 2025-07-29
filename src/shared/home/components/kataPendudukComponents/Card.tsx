@@ -7,11 +7,11 @@ import type { CardProps, CardContentProps } from "../../types/index"
 export const Card: React.FC<CardProps> = ({ children, className = "" }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      whileHover={{ y: -2 }}
-      className={`bg-white rounded-lg w-md border-2 border-teal-300 overflow-hidden transition-all duration-300 hover:shadow-md ${className}`}
+      whileHover={{ 
+        y: -5,
+        transition: { duration: 0.2 }
+      }}
+      className={`bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg ${className}`}
     >
       {children}
     </motion.div>
@@ -19,5 +19,9 @@ export const Card: React.FC<CardProps> = ({ children, className = "" }) => {
 }
 
 export const CardContent: React.FC<CardContentProps> = ({ children, className = "" }) => {
-  return <div className={`p-4 ${className}`}>{children}</div>
+  return (
+    <div className={`p-6 ${className}`}>
+      {children}
+    </div>
+  )
 }
