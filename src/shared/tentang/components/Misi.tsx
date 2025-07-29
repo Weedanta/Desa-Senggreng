@@ -121,7 +121,7 @@ const Misi: React.FC<MisiProps> = ({ items, className }) => {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {displayItems.map((item, index) => (
+          {displayItems.map((item) => (
             <motion.div
               key={item.id}
               variants={itemVariants}
