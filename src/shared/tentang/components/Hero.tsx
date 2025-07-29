@@ -18,7 +18,7 @@ const Hero = () => {
         <Image
           src={HeroImage || "/placeholder.svg"}
           alt="Hero Tentang"
-          className="w-full h-screen md:h-96 lg:h-auto object-cover"
+          className="w-full h-64 sm:h-80 md:h-96 lg:h-auto object-cover"
           draggable={false}
           priority
         />
