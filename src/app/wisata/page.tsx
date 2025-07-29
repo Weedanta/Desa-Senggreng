@@ -1,10 +1,9 @@
 import React from 'react'
+import WisataContainer from '@/shared/wisata/container/WisataContainer'
 
 const page = () => {
   return (
-    <div className='h-screen bg-white' >
-
-    </div>
+    <WisataContainer />
   )
 }
 
