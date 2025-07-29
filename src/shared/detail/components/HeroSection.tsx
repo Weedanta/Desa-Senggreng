@@ -1,9 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import HeroImage from "@/assets/images/tentang/hero-tentang.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-const HeroSection = () => {
+interface HeroProps {
+  imageSrc: string | StaticImageData;
+}
+
+const Hero: React.FC<HeroProps> = ({ imageSrc }) => {
   return (
     <section className="w-full flex items-center justify-center">
       <motion.div
@@ -16,15 +19,17 @@ const HeroSection = () => {
         className="w-full"
       >
         <Image
-          src={HeroImage || "/placeholder.svg"}
-          alt="Hero Tentang"
-          className="w-full h-90 object-cover"
+          src={imageSrc}
+          alt="Hero Image"
+          className="w-full h-[60vh] object-cover"
           draggable={false}
           priority
+          width={1920}
+          height={1080}
         />
       </motion.div>
     </section>
   );
 };
 
-export default HeroSection;
+export default Hero;

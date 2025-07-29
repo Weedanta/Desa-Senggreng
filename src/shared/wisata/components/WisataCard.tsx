@@ -61,7 +61,7 @@ const WisataCard: React.FC<WisataCardProps> = ({ item, index }) => {
               className={`
               text-2xl md:text-3xl lg:text-5xl 
               font-semibold text-gradient-1 
-              mb-2 md:mb-3 lg:mb-4
+              pb-2 md:pb-3 lg:pb-4
               ${isOdd ? "lg:text-left" : "lg:text-right"}
             `}
             >
