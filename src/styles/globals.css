@@ -198,3 +198,11 @@ select {
   width: 100%;
   min-height: 100%; /* Minimal setinggi container */
 }
+
+.border-gradient {
+  border: 3px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(90deg, #007EE8 0%, #66E077 100%) border-box;
+  border-radius: 16px;
+}
+
