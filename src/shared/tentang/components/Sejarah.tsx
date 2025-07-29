@@ -7,7 +7,7 @@ const Sejarah = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <SectionHeader title="Sejarah">
-        <div className="text-xl md:text-2xl lg:text-3xl flex flex-col gap-6 text-justify text-primary-800 pb-12 lg:pb-4 w-full">
+        <div className="text-xl md:text-2xl lg:text-3xl flex flex-col gap-6 text-justify font-medium text-primary-800 pb-4 w-full">
           <p>
             Jauh sebelum desa ini ramai, awalnya Senggreng adalah hutan lebat
             yang belum terjamah manusia. Dalam istilah Jawa, kawasan ini disebut
@@ -43,7 +43,7 @@ const Sejarah = () => {
             keberkahan.
           </p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8">
           <Image
             src={Line}
             alt="Line"
