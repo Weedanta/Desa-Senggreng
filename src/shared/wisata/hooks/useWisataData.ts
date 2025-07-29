@@ -2,10 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { WisataItem } from '../types';
-import SumberDuren from '@/assets/images/Wisata/SumberDuren.png'
-import RajutIndah from '@/assets/images/Wisata/RajutIndah.png'
-import RowoKlampo from '@/assets/images/Wisata/RowoKlampo.png'
-import EmbungSumberPucung from '@/assets/images/Wisata/EmbungSumberPucung.png'
 
 export const useWisataData = () => {
   const [wisataData, setWisataData] = useState<WisataItem[]>([]);
@@ -19,8 +15,8 @@ export const useWisataData = () => {
         {
           id: 1,
           name: "Sumber Duren",
-          description: "Wisata Sumber Duren adalah sebuah destinasi yang memukau yang terletak di dusun Kecepatan, Sengguruh, Kecamatan Sumberpucung. Tempat ini terkenal berekselerasi dengan Wisata Kolam Istana sehingga pengunjung dapat menikmati pemandangan indah dan keterangan air, wisata sumber merupakan kuliner khas daerah ini.",
-          image: SumberDuren.src, 
+          description: "Wisata Sumber Duren adalah sebuah destinasi yang memukau yang terletak di dusun Kecopokan, Senggreng, Kecamatan Sumberpucung. Tempat ini terletak berdekatan dengan Waduk Rajut Indah, sehingga pengunjung dapat menikmati pemandangan indah dan ketenangan air waduk sambil mengeksplorasi kuliner khas daerah ini.",
+          image: require('@/assets/images/Wisata/SumberDuren.png').default,
           location: "Dusun Kecepatan, Sengguruh, Kec. Sumberpucung",
           detailLink: "/wisata/sumber-duren"
         },
@@ -28,7 +24,7 @@ export const useWisataData = () => {
           id: 2,
           name: "Rowo Klampok",
           description: "Rowo Klampok merupakan destinasi wisata alam yang dikejala bersama oleh pemerintah desa dan masyarakat setempat. Tempat ini menyajikan panorama wisata yang luas dan tenang, memberikan suasana sejuk dan damai bagi para pengunjung. Dikelilingi pegunungan indah dan langit yang memukau, tempat ini cocok untuk melepas penat dari hiruk-pikuk kota.",
-          image: RowoKlampo.src,
+          image: require('@/assets/images/Wisata/RowoKlampo.png').default,
           location: "Desa Klampok, Kec. Sumberpucung",
           detailLink: "/wisata/rowo-klampok"
         },
@@ -36,7 +32,7 @@ export const useWisataData = () => {
           id: 3,
           name: "Embung Sumberpucung",
           description: "Wisata Kolam Indah yang terletak di Dusun Kecepatan, Sengguruh, Kec. Sumberpucung merupakan destinasi wisata yang menggabungkan keindahan wisata kolam dari tempat ikma yang menakjubkan. Tempat ini menawarkan pesona alam dan budaya nelayan dalam satu pengalaman yang menarik.",
-          image: EmbungSumberPucung.src,
+          image: require('@/assets/images/Wisata/EmbungSumberPucung.png').default,
           location: "Dusun Kecepatan, Sengguruh, Kec. Sumberpucung",
           detailLink: "/wisata/embung-sumberpucung"
         },
@@ -44,11 +40,12 @@ export const useWisataData = () => {
           id: 4,
           name: "Rajut Indah",
           description: "Wisata Kolam Indah yang terletak di Dusun Kecepatan, Sengguruh, Kec. Sumberpucung merupakan destinasi wisata yang menggabungkan keindahan wisata kolam dari tempat ikma yang menakjubkan. Tempat ini menawarkan pesona alam dan budaya nelayan dalam satu pengalaman yang menarik.",
-          image: RajutIndah.src,
+          image: require('@/assets/images/Wisata/RajutIndah.png').default,
           location: "Dusun Kecepatan, Sengguruh, Kec. Sumberpucung",
-          detailLink: "/wisata/embung-sumberpucung"
+          detailLink: "/wisata/rajut-indah"
         }
       ];
+
 
       // Simulate loading delay
       setTimeout(() => {
