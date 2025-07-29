@@ -38,7 +38,7 @@ const KataPenduduk: React.FC<KataPendudukProps> = ({
   const tabletTestimonials = getVisibleTestimonials(currentIndex, 2);
   const desktopTestimonials = getVisibleTestimonials(currentIndex, 3);
 
-  const renderTestimonialCard = (testimonial: any, index: number) => (
+  const renderTestimonialCard = (testimonial: { id: string; name: string; content: string; displayIndex: number }, index: number) => (
     <motion.div
       key={`${testimonial.id}-${index}`}
       initial={{ opacity: 0, y: 20 }}
@@ -55,12 +55,12 @@ const KataPenduduk: React.FC<KataPendudukProps> = ({
           <div className="flex flex-col items-center text-left space-y-4">
             <div className="flex gap-4 w-full">
               <div className="w-16 h-16 rounded-full gradient-1 flex items-center justify-center shadow-lg">
-                <span className="text-2xl font-semibold text-white">
+                <span className="text-2xl font-bold text-white">
                   {testimonial.name.charAt(0)}
                 </span>
               </div>
               <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-gray-900 text-lg">
+                <h3 className="font-bold text-gray-900 text-lg">
                   {testimonial.name}
                 </h3>
                 <p className="text-base text-white-700">
@@ -70,7 +70,7 @@ const KataPenduduk: React.FC<KataPendudukProps> = ({
             </div>
 
             <p className="text-gray-600 text-sm leading-relaxed italic text-justify">
-              "{testimonial.content}"
+              &ldquo;{testimonial.content}&rdquo;
             </p>
           </div>
         </CardContent>
@@ -199,7 +199,7 @@ const KataPenduduk: React.FC<KataPendudukProps> = ({
                     onClick={() => goToSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentIndex
-                        ? "bg-cyan-600 scale-110 shadow-lg"
+                        ? "bg-cyan-600 scale-125 shadow-lg"
                         : "bg-gray-300 hover:bg-gray-400"
                     }`}
                   />
