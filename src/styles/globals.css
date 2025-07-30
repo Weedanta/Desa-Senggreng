@@ -190,7 +190,7 @@ select {
 }
 
 .bg-custom {
-  background-image: url("/src/assets/images/Background.png");
+  background-image: url("../assets/images/Background.png");
   background-size: cover; /* Menutupi seluruh container dengan proporsi tetap */
   background-position: center center;
   background-repeat: no-repeat;
