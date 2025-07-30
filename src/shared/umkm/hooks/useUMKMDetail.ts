@@ -25,7 +25,7 @@ export const useUMKMDetail = (id: string) => {
             
             videoReview: {
               type: 'iframe',
-              url: 'https://www.youtube.com/embed/X-EK60rmcQs?rel=0&modestbranding=1&showinfo=0',
+              url: 'https://www.youtube.com/embed/3hej0KGlJIU',
               title: 'Review Family Chicken Senggreng'
             },
             
