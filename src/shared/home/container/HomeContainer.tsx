@@ -13,9 +13,9 @@ const HomeContainer = () => {
         <HeroSection />
         <TentangSection />
         <ProfileDesa />
-        <UMKMSection />
+        {/* <UMKMSection />
         <WisataSection />
-        <VirtualTour />
+        <VirtualTour /> */}
         <KataPenduduk />
     </div>
   )

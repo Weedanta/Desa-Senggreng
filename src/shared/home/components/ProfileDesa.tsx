@@ -10,7 +10,7 @@ const ProfileDesa = () => {
   )?.[1];
 
   // Create embed URL
-  const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&showinfo=0`;
+  const embedUrl = `https://www.youtube.com/embed/hcSTEswNit8`;
 
   return (
     <section className="mycontainer py-24 lg:min-h-screen flex justify-center items-center">
