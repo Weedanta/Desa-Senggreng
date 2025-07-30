@@ -14,7 +14,7 @@ export const useUMKMData = () => {
       const mockData: UMKMItem[] = [
         {
           id: 1,
-          name: "Family Chicken Senggreng",
+          name: "Family Chicken",
           description: "Family Chicken adalah restoran ayam yang menyediakan berbagai menu seperti ayam crispy, ayam geprek, dengan berbagai varian sambal nikmat. Dengan fasilitas yang nyaman dan harga bersahabat, restoran ini menjadi favorit warga untuk makan bersama, atau sekedar makan siang.",
           image: require('@/assets/images/UMKM/FamilyChicken.png').default,
           location: "Dusun Ngrancah, Senggreng",

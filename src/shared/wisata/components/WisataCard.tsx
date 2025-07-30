@@ -8,6 +8,19 @@ import { WisataCardProps } from "../types";
 const WisataCard: React.FC<WisataCardProps> = ({ item, index }) => {
   const isOdd = index % 2 === 0;
 
+  // Create slug from item name for detail link
+  const createSlug = (name: string): string => {
+    return name
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^\w\-]+/g, '')
+      .replace(/\-\-+/g, '-')
+      .replace(/^-+/, '')
+      .replace(/-+$/, '');
+  };
+
+  const detailSlug = createSlug(item.name);
+
   return (
     <div
       className={`
@@ -86,7 +99,7 @@ const WisataCard: React.FC<WisataCardProps> = ({ item, index }) => {
             `}
             >
               <Link
-                href={item.detailLink}
+                href={`/wisata/${detailSlug}`}
                 className="
                   inline-flex items-center 
                   px-4 py-2 md:px-6 md:py-2 lg:px-4 lg:py-2

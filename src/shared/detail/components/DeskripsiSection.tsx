@@ -4,7 +4,13 @@ import SectionHeader from '@/shared/components/section/section'
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const DeskripsiSection = () => {
+interface DeskripsiSectionProps {
+  description?: string;
+}
+
+const DeskripsiSection: React.FC<DeskripsiSectionProps> = ({ 
+  description = "Sumber Duren merupakan salah satu tempat wisata yang berfokus pada konservasi alam dan berlatar belakang pemberdayaan masyarakat di bidang ekonomi, terutama pada sektor perikanan air tawar. Produk unggulan air tawar yang dihasilkan berupa ikan mujair, ikan tombro, dan bandeng tawar yang bisa dinikmati sambil bersantai. Tempat wisata ini dilengkapi dengan fasilitas camping ground, spot pemancingan, panggung utama, dan pujasera."
+}) => {
   return (
     <div className=" flex items-center justify-center">
       <SectionHeader title="Deskripsi">
@@ -30,7 +36,7 @@ const DeskripsiSection = () => {
             }}
             viewport={{ once: true }}
           >
-            Sumber Duren merupakan salah satu tempat wisata yang berfokus pada konservasi alam dan berlatar belakang pemberdayaan masyarakat di bidang ekonomi, terutama pada sektor perikanan air tawar. Produk unggulan air tawar yang dihasilkan berupa ikan mujair, ikan tombro, dan bandeng tawar yang bisa dinikmati sambil bersantai. Tempat wisata ini dilengkapi dengan fasilitas camping ground, spot pemancingan, panggung utama, dan pujasera.
+            {description}
           </motion.p>
         </motion.div>
       </SectionHeader>
