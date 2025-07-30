@@ -2,11 +2,18 @@
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 
-interface HeroProps {
-  imageSrc: string | StaticImageData;
+interface HeroSectionProps {
+  imageSrc?: string | StaticImageData;
+  title?: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ imageSrc }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ 
+  imageSrc, 
+  title = "Detail"
+}) => {
+  const defaultImage = require("@/assets/images/tentang/hero-tentang.png").default;
+  const heroImage = imageSrc || defaultImage;
+
   return (
     <section className="w-full flex items-center justify-center">
       <motion.div
@@ -19,8 +26,8 @@ const Hero: React.FC<HeroProps> = ({ imageSrc }) => {
         className="w-full"
       >
         <Image
-          src={imageSrc}
-          alt="Hero Image"
+          src={heroImage}
+          alt={`Hero ${title}`}
           className="w-full h-[60vh] object-cover"
           draggable={false}
           priority
@@ -32,4 +39,4 @@ const Hero: React.FC<HeroProps> = ({ imageSrc }) => {
   );
 };
 
-export default Hero;
+export default HeroSection;
