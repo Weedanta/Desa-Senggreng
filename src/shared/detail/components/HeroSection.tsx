@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
+import DefaultHeroImage from "@/assets/images/tentang/hero-tentang.png";
 
 interface HeroSectionProps {
   imageSrc?: string | StaticImageData;
@@ -11,8 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   imageSrc, 
   title = "Detail"
 }) => {
-  const defaultImage = require("@/assets/images/tentang/hero-tentang.png").default;
-  const heroImage = imageSrc || defaultImage;
+  const heroImage = imageSrc || DefaultHeroImage;
 
   return (
     <section className="w-full flex items-center justify-center">
