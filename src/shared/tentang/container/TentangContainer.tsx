@@ -6,9 +6,9 @@ import Hero from "../components/Hero";
 
 const TentangContainer = () => {
   return (
-    <section>
+    <section className="bg-custom">
       <Hero />
-      <div className="mycontainer bg-custom">
+      <div className="mycontainer ">
         <Visi />
         <Misi />
         <Sejarah />

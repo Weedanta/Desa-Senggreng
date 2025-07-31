@@ -7,6 +7,7 @@ import Logo from "@/assets/images/layout/logo.png";
 import IG from "@/assets/images/layout/social-media/ig.svg";
 import TELP from "@/assets/images/layout/social-media/telp.svg";
 import MAIL from "@/assets/images/layout/social-media/mail.svg";
+import Link from "next/link";
 
 const FooterSection: React.FC<{
   children: React.ReactNode;
@@ -24,7 +25,13 @@ const LogoSection: React.FC<{
     <div className="flex items-center gap-4">
       {logoSrc && (
         <div className="w-36 h-44 relative">
-          <Image src={Logo} alt="Logo Desa" fill className="object-contain" draggable="false"/>
+          <Image
+            src={Logo}
+            alt="Logo Desa"
+            fill
+            className="object-contain"
+            draggable="false"
+          />
         </div>
       )}
       <div className="space-y-0.5">
@@ -46,7 +53,7 @@ const NavigationSection: React.FC<{
         <li key={index}>
           <a
             href={item.href}
-            className="text-white hover:text-white-600 hover:underline hover:underline-offset-2 font-medium transition-colors duration-200 text-lg"
+            className="text-white hover:text-white-600 hover:underline hover:underline-offset-2 font-medium transition-colors duration-200 text-base"
           >
             {item.label}
           </a>
@@ -62,22 +69,34 @@ const ContactSection: React.FC<{
 }> = ({ title, contact }) => (
   <FooterSection>
     <h3 className="text-xl font-semibold font-sans text-white mb-4">{title}</h3>
-    <div className="space-y-3">
-      <div className="flex items-center gap-3">
-        <Image src={IG} alt="Instagram" className="w-8 h-8" draggable="false" />
+    <div className="flex flex-col gap-2">
+      <Link href={"https://www.instagram.com/pemdessenggreng"}>
+        <div className="flex items-center gap-3">
+          <Image
+            src={IG}
+            alt="Instagram"
+            className="w-8 h-8"
+            draggable="false"
+          />
+          <span className="text-white md:text-sm text-base">
+            @{contact.instagram}
+          </span>
+        </div>
+      </Link>
 
-        <span className="text-white text-base">@{contact.instagram}</span>
+      <div className="flex items-center gap-3">
+        <Image src={TELP} alt="Phone" className="w-8 h-8" draggable="false" />
+        <span className="text-white md:text-sm text-base">{contact.phone}</span>
       </div>
 
-      <div className="flex items-center gap-3">
-        <Image src={TELP} alt="Phone" className="w-8 h-8" draggable="false"/>
-        <span className="text-white text-base">{contact.phone}</span>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <Image src={MAIL} alt="Email" className="w-8 h-8" draggable="false"/>
-        <span className="text-white text-base break-all">{contact.email}</span>
-      </div>
+      <Link href={"mailto:senggreng.sumberpucung@malangkab.go.id"}>
+        <div className="flex items-center gap-3">
+          <Image src={MAIL} alt="Email" className="w-8 h-8" draggable="false" />
+          <span className="text-white md:text-sm text-base break-all">
+            {contact.email}
+          </span>
+        </div>
+      </Link>
     </div>
   </FooterSection>
 );
@@ -86,9 +105,11 @@ const CreditSection: React.FC = () => (
   <div className="text-center py-2 border-t bg-white border-white/20 font-sans">
     <p className="text-gray-800 text-sm">
       Made with ❤️ by{" "}
+      <Link href={'https://www.instagram.com/mmd_filkom_51_senggreng'}>
       <span className="font-semibold text-primary-600">
         MMD Filkom Kelompok 51
       </span>
+      </Link>
     </p>
   </div>
 );

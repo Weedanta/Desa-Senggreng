@@ -25,9 +25,9 @@ const UMKMCard: React.FC<UMKMCardProps> = ({ item, index }) => {
     <div
       className={`
       relative w-full mx-auto mb-12 
-      bg-gradient-to-br from-cyan-50 to-blue-50 
+      bg-white/75
       rounded-3xl overflow-hidden shadow-lg
-      p-3 md:p-6 lg:p-14 border border-primary-500
+      p-3 md:p-6 lg:p-14 border-gradient
       ${isOdd ? "lg:ml-0" : "lg:mr-0"}
     `}
     >

@@ -107,7 +107,7 @@ export const NavbarComponent = ({
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 ${className}`}>
         <div className="mx-auto w-[80%] lg:max-w-6xl">
-          <div className={`bg-white backdrop-blur-sm shadow-xl border border-gray-200/50 mt-4 transition-all duration-300 ${
+          <div className={`bg-white/75 backdrop-blur-sm shadow-xl border border-gray-200/50 mt-4 transition-all duration-300 ${
             isMobileMenuOpen 
               ? 'rounded-t-2xl rounded-b-2xl' 
               : 'rounded-4xl'

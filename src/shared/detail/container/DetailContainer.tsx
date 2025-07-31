@@ -40,7 +40,7 @@ const DetailContainer: React.FC<DetailContainerProps> = ({
   const finalContent = content || defaultContent;
 
   return (
-    <section className={`w-full ${className}`}>
+    <section className={`w-full bg-custom ${className}`}>
       <HeroSection 
         imageSrc={finalContent.heroImage} 
         title={finalContent.title}
