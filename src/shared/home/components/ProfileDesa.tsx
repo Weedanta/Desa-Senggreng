@@ -15,12 +15,12 @@ const ProfileDesa = () => {
   return (
     <section className="mycontainer py-24 lg:min-h-screen flex justify-center items-center">
       <SectionHeader title="Profil Desa">
-        <div className="bg-black w-full aspect-video rounded-2xl overflow-hidden relative group">
+        <div className="w-full aspect-video rounded-2xl overflow-hidden relative group shadow-2xl">
           {/* YouTube Embed */}
           <iframe
             src={embedUrl}
             title="Profil Desa Video"
-            className="w-full h-full"
+            className="w-full h-full border-gradient"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
