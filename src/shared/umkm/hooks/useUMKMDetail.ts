@@ -64,7 +64,7 @@ export const useUMKMDetail = (id: string) => {
             
             videoReview: {
               type: 'iframe',
-              url: 'la',
+              url: 'https://www.youtube.com/embed/3hej0KGlJIU',
               title: 'Review Warung Biru'
             },
             
