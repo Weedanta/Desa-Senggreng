@@ -26,7 +26,7 @@ const UMKMContainer: React.FC = () => {
   }
 
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen bg-custom">
       <HeroSection imageSrc={UMKMHero}/>
 
       <div className="w-full py-12 mycontainer">

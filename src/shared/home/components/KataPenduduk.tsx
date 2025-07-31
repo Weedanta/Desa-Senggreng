@@ -79,7 +79,7 @@ const KataPenduduk: React.FC<KataPendudukProps> = ({
   );
 
   return (
-    <section className="py-12 lg:py-24 bg-gray-50 w-full">
+    <section className="py-12 lg:py-24  w-full">
       <div className="mycontainer">
         <SectionHeader title="Kata Penduduk">
           <div className="relative w-full mx-auto">

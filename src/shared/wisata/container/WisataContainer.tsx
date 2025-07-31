@@ -11,7 +11,7 @@ const WisataContainer: React.FC = () => {
   const { wisataData } = useWisataData();
 
   return (
-    <section className="w-full min-h-screen">
+    <section className="w-full min-h-screen bg-custom">
       <HeroSection imageSrc={WisataHero}/>
 
       <div className="w-full py-12 mycontainer">
