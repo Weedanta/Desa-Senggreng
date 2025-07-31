@@ -160,7 +160,7 @@ select {
 }
 
 .mycontainer {
-  @apply container right-0 left-0 mx-auto lg:px-8 md:px-20 px-8 xl:px-0 transition-all duration-300;
+  @apply container right-0 left-0 mx-auto lg:px-8 md:px-20 px-8 transition-all duration-300;
 }
 
 .gradient-1 {
