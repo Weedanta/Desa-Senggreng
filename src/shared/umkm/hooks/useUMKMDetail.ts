@@ -64,7 +64,7 @@ export const useUMKMDetail = (id: string) => {
             
             videoReview: {
               type: 'iframe',
-              url: 'https://www.youtube.com/embed/X-EK60rmcQs?rel=0&modestbranding=1&showinfo=0',
+              url: 'la',
               title: 'Review Warung Biru'
             },
             
@@ -102,7 +102,7 @@ export const useUMKMDetail = (id: string) => {
             
             videoReview: {
               type: 'iframe',
-              url: 'https://www.youtube.com/embed/X-EK60rmcQs?rel=0&modestbranding=1&showinfo=0',
+              url: 'https://www.youtube.com/embed/_vBnpD85RM4',
               title: 'Proses Pembuatan Anyaman'
             },
             
@@ -140,7 +140,7 @@ export const useUMKMDetail = (id: string) => {
             
             videoReview: {
               type: 'iframe',
-              url: 'https://www.youtube.com/embed/X-EK60rmcQs?rel=0&modestbranding=1&showinfo=0',
+              url: 'https://www.youtube.com/embed/_vBnpD85RM4',
               title: 'Proses Pembuatan Kotak Makanan'
             },
             
