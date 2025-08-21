@@ -25,7 +25,7 @@ export const useWisataDetail = (id: string) => {
             
             virtualTour: {
               type: 'iframe',
-              url: 'https://www.google.com/maps/embed?pb=!4v1734581234567!6m8!1m7!1sCAoSLEFGMVFpcE9fSWhVUVJqeGRsdjNiVGhxVjBXcERYaWZZQU1wdFEtdlBOSE16!2m2!1d-8.1234567!2d112.6234567!3f180!4f0!5f0.7820865974627469',
+              url: 'https://tour.panoee.net/iframe/68985260a3c49358b4257fe1',
               title: 'Virtual Tour Sumber Duren'
             },
             

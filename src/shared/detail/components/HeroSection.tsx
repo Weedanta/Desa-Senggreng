@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   const heroImage = imageSrc || DefaultHeroImage;
 
   return (
-    <section className="w-full flex items-center justify-center">
+    <section className="w-full flex items-center justify-center ">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}

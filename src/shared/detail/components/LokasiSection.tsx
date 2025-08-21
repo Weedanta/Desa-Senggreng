@@ -14,15 +14,9 @@ interface LocationInfo {
   address?: string;
 }
 
-interface PriceInfo {
-  range: string;
-  currency?: string;
-}
-
 interface LokasiSectionProps {
   location?: LocationInfo;
   facilities?: Facility[];
-  priceRange?: PriceInfo;
   contact?: string;
   category?: 'wisata' | 'umkm';
 }
@@ -37,7 +31,6 @@ const LokasiSection: React.FC<LokasiSectionProps> = ({
     { id: "parking", name: "Parkir Gratis" },
     { id: "toilet", name: "Toilet" }
   ],
-  priceRange = { range: "Rp11.000—25.000" },
   contact,
   category = 'wisata'
 }) => {
@@ -74,7 +67,7 @@ const LokasiSection: React.FC<LokasiSectionProps> = ({
             {/* Right Side - Information */}
             <div className="flex flex-col gap-4">
               {/* Price Range Card - for Wisata */}
-              {category === 'wisata' && priceRange && (
+              {category === 'wisata' && (
                 <motion.div
                   className="bg-white rounded-3xl p-6 shadow-md border-gradient"
                   initial={{ opacity: 0, x: 30 }}
@@ -87,7 +80,7 @@ const LokasiSection: React.FC<LokasiSectionProps> = ({
                   viewport={{ once: true }}
                 >
                   <h3 className="text-lg md:text-xl font-semibold text-gradient-1 text-left">
-                    Range Harga: {priceRange.range}
+                    Kategori : Wisata Alam
                   </h3>
                 </motion.div>
               )}
