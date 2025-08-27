@@ -13,7 +13,7 @@ interface GalleryImageProps {
 export const GalleryImage = ({ image, className = "", index = 0 }: GalleryImageProps) => {
   return (
     <motion.div
-      className={`relative group overflow-hidden rounded-2xl ${className}`}
+      className={`relative group overflow-hidden rounded-2xl cursor-pointer ${className}`}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{
@@ -34,22 +34,11 @@ export const GalleryImage = ({ image, className = "", index = 0 }: GalleryImageP
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
 
-      {/* Hover overlay with title */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <motion.div
-          className="absolute bottom-0 left-0 right-0 p-4"
-          initial={{ y: "100%" }}
-          whileHover={{ y: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-        >
-          <h3 className="text-white font-semibold text-lg md:text-xl text-balance">{image.title}</h3>
-        </motion.div>
-      </motion.div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out">
+          <h3 className="text-white font-semibold text-lg md:text-xl text-balance leading-tight">{image.title}</h3>
+        </div>
+      </div>
     </motion.div>
   )
 }
