@@ -69,8 +69,7 @@ const DetailContainer: React.FC<DetailContainerProps> = ({
             
             <LokasiSection 
               location={finalContent.location}
-              facilities={finalContent.facilities}
-              priceRange={finalContent.priceRange}
+              facilities={finalContent.facilities} 
               contact={finalContent.contact}
               category={finalContent.category}
             />
