@@ -37,7 +37,7 @@ export const GaleriContainer = () => {
 
   return (
     <motion.div
-      className="min-h-screen mycontainer bg-custom py-28 md:py-32"
+      className="min-h-screen mycontainer py-28 md:py-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
