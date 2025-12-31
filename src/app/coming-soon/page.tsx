@@ -1,10 +1,24 @@
 "use client";
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import ComingSoonText from "@/assets/images/comingsoon.svg";
 import BackgroundComingSoon from "@/assets/images/bg-home.png";
 import logo from "@/assets/images/logo.svg";
 import { motion } from "framer-motion";
+
+export const metadata: Metadata = {
+  title: "Fitur Segera Hadir | Desa Senggreng",
+  description:
+    "Halaman fitur yang akan segera hadir di Desa Senggreng. Nantikan informasi terbaru seputar desa, wisata, dan UMKM.",
+  alternates: {
+    canonical: "/coming-soon",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function Home() {
   return (
