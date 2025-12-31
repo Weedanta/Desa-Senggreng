@@ -1,10 +1,19 @@
-import React from 'react'
-import HomeContainer from '@/shared/home/container/HomeContainer'
+import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 
-const page = () => {
-  return (
-    <HomeContainer />
-  )
-}
+export const metadata: Metadata = {
+  title: "Beranda Desa Senggreng",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
-export default page
+const Page = () => {
+  return redirect("/");
+};
+
+export default Page;
