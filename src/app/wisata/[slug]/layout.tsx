@@ -45,6 +45,12 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${detail.title} | Wisata Desa Senggreng`,
+      description: detail.description,
+      images: [siteOgImage],
+    },
   };
 }
 
