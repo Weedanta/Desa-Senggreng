@@ -20,6 +20,8 @@ export interface UseKataPendudukReturn {
   prevSlide: () => void
   goToSlide: (index: number) => void
   visibleTestimonials: Testimonial[]
+  totalPages: number
+  itemsPerPage: number
 }
 
 export interface CardProps {

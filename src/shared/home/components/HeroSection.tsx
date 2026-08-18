@@ -65,7 +65,7 @@ export default function HeroSection() {
           >
             <Image
               src={HeroImage}
-              alt="Hero Image"
+              alt="Pemandangan Lanskap Alam dan Pesona Wisata Desa Senggreng Sumberpucung"
               className="md:w-auto w-full md:h-[40vh] lg:h-[64vh] xl:h-[72vh] object-cover"
               draggable={false}
               priority

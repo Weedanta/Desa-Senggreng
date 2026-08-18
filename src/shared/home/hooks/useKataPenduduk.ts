@@ -78,40 +78,62 @@ export const useKataPenduduk = (
     ? testimonials 
     : defaultTestimonials
 
+  const [itemsPerPage, setItemsPerPage] = useState(3)
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 768) {
+        setItemsPerPage(1)
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(2)
+      } else {
+        setItemsPerPage(3)
+      }
+    }
+
+    updateItemsPerPage()
+    window.addEventListener("resize", updateItemsPerPage)
+    return () => window.removeEventListener("resize", updateItemsPerPage)
+  }, [])
+
+  const totalPages = Math.max(1, Math.ceil(safeTestimonials.length / itemsPerPage))
+
+  useEffect(() => {
+    if (currentIndex >= totalPages && totalPages > 0) {
+      setCurrentIndex(0)
+    }
+  }, [totalPages, currentIndex])
+
   const nextSlide = useCallback(() => {
-    setCurrentIndex(prevIndex => 
-      (prevIndex + 1) % safeTestimonials.length
-    )
-  }, [safeTestimonials.length])
+    setCurrentIndex(prevIndex => (prevIndex + 1) % totalPages)
+  }, [totalPages])
 
   const prevSlide = useCallback(() => {
-    setCurrentIndex(prevIndex => 
-      prevIndex === 0 ? safeTestimonials.length - 1 : prevIndex - 1
-    )
-  }, [safeTestimonials.length])
+    setCurrentIndex(prevIndex => (prevIndex === 0 ? totalPages - 1 : prevIndex - 1))
+  }, [totalPages])
 
   const goToSlide = useCallback(
     (index: number) => {
-      if (index >= 0 && index < safeTestimonials.length) {
+      if (index >= 0 && index < totalPages) {
         setCurrentIndex(index)
       }
     },
-    [safeTestimonials.length]
+    [totalPages]
   )
 
-  const visibleTestimonials = safeTestimonials.slice(0, 3)
+  const startIndex = currentIndex * itemsPerPage
+  const visibleTestimonials = safeTestimonials.slice(startIndex, startIndex + itemsPerPage)
 
   useEffect(() => {
-    if (!autoPlay) return
+    if (!autoPlay || totalPages <= 1) return
 
     const interval = setInterval(() => {
       nextSlide()
     }, autoPlayInterval)
     
     return () => clearInterval(interval)
-  }, [autoPlay, autoPlayInterval, nextSlide])
+  }, [autoPlay, autoPlayInterval, nextSlide, totalPages])
 
   return {
     currentIndex,
@@ -120,5 +142,7 @@ export const useKataPenduduk = (
     prevSlide,
     goToSlide,
     visibleTestimonials,
+    totalPages,
+    itemsPerPage,
   }
 }
