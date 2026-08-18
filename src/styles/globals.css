@@ -133,7 +133,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
-  font-weight: 400; /* Gunakan nilai langsung, bukan CSS variable */
+  font-weight: 400;
 }
 
 h1,
@@ -178,25 +178,14 @@ select {
   font-weight: 500 !important;
 }
 
-.gradient-1 {
-  background: linear-gradient(90deg, #007ee8 0%, #66e077 100%);
-}
-
-.text-gradient-1 {
-  background: linear-gradient(90deg, #007ee8 0%, #66e077 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .bg-custom {
   background-image: url("../assets/images/Background.png");
-  background-size: cover; /* Menutupi seluruh container dengan proporsi tetap */
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: local; /* Background scroll dengan content */
+  background-attachment: local;
   width: 100%;
-  min-height: 100%; /* Minimal setinggi container */
+  min-height: 100%;
 }
 
 .border-gradient {
@@ -206,3 +195,35 @@ select {
   border-radius: 16px;
 }
 
+/* Skeleton Loading Shimmer */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.4) 20%,
+    rgba(255, 255, 255, 0.7) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+}

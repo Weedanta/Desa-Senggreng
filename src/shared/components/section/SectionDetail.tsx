@@ -48,6 +48,7 @@ const SectionDetailHeader: React.FC<SectionHeaderProps> = ({ title, children }) 
           <Image 
             src={DekorLeft} 
             alt="" 
+            aria-hidden="true"
             className="h-12 md:h-20" 
             draggable={false} 
           />
@@ -80,6 +81,7 @@ const SectionDetailHeader: React.FC<SectionHeaderProps> = ({ title, children }) 
           <Image 
             src={DekorRight} 
             alt="" 
+            aria-hidden="true"
             className="h-12 md:h-20" 
             draggable={false} 
           />

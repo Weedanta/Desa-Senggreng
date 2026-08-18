@@ -27,7 +27,7 @@ const LogoSection: React.FC<{
         <div className="w-36 h-44 relative">
           <Image
             src={Logo}
-            alt="Logo Desa"
+            alt="Logo Resmi Pemerintah Desa Senggreng"
             fill
             className="object-contain"
             draggable="false"
@@ -74,7 +74,7 @@ const ContactSection: React.FC<{
         <div className="flex items-center gap-3">
           <Image
             src={IG}
-            alt="Instagram"
+            alt="Ikon Media Sosial Instagram Desa Senggreng"
             className="w-8 h-8"
             draggable="false"
           />
@@ -85,13 +85,13 @@ const ContactSection: React.FC<{
       </Link>
 
       <div className="flex items-center gap-3">
-        <Image src={TELP} alt="Phone" className="w-8 h-8" draggable="false" />
+        <Image src={TELP} alt="Ikon Nomor Kontak Telepon Kantor Desa Senggreng" className="w-8 h-8" draggable="false" />
         <span className="text-white md:text-sm text-base">{contact.phone}</span>
       </div>
 
       <Link href={"mailto:senggreng.sumberpucung@malangkab.go.id"}>
         <div className="flex items-center gap-3">
-          <Image src={MAIL} alt="Email" className="w-8 h-8" draggable="false" />
+          <Image src={MAIL} alt="Ikon Email Resmi Pelayanan Desa Senggreng" className="w-8 h-8" draggable="false" />
           <span className="text-white md:text-sm text-base break-all">
             {contact.email}
           </span>
