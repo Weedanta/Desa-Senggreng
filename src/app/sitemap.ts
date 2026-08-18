@@ -7,12 +7,12 @@ import {
 } from "./seo-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const generatedAt = new Date();
+  const lastModified = new Date();
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.map(
     ({ path, changeFrequency, priority }) => ({
       url: absoluteUrl(path),
-      lastModified: generatedAt,
+      lastModified,
       changeFrequency,
       priority,
     })
@@ -20,16 +20,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const wisataEntries: MetadataRoute.Sitemap = wisataDetails.map((item) => ({
     url: absoluteUrl(`/wisata/${item.slug}`),
-    lastModified: generatedAt,
+    lastModified,
     changeFrequency: "weekly",
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   const umkmEntries: MetadataRoute.Sitemap = umkmDetails.map((item) => ({
     url: absoluteUrl(`/umkm/${item.slug}`),
-    lastModified: generatedAt,
+    lastModified,
     changeFrequency: "weekly",
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   return [...staticEntries, ...wisataEntries, ...umkmEntries];

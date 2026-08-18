@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "@/styles/globals.css";
+import StickyMobileCTA from "@/shared/components/layout/StickyMobileCTA";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -12,6 +13,12 @@ const poppins = Poppins({
 const metadataBaseUrl = "https://desa-senggreng.vercel.app";
 const ogImage =
   "https://res.cloudinary.com/matic-malang/image/upload/v1691651913/z0x7gz6l9pgulxyc4mdv.jpg";
+
+export const viewport: Viewport = {
+  themeColor: "#007ee8",
+  width: "device-width",
+  initialScale: 1,
+};
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -30,6 +37,7 @@ const organizationJsonLd = {
   sameAs: [
     "https://desa-senggreng.vercel.app/",
     "https://maps.app.goo.gl/",
+    "https://www.instagram.com/pemdessenggreng",
   ],
 };
 
@@ -70,6 +78,31 @@ export const metadata: Metadata = {
     "Ekonomi Kreatif Senggreng",
     "Inovasi Desa Senggreng",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "icon",
+        url: "/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        rel: "icon",
+        url: "/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+  },
+  manifest: "/manifest.webmanifest",
   openGraph: {
     title: "Profil Desa Senggreng | Wisata & UMKM",
     description:
@@ -107,9 +140,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} antialiased font-sans`}>
-        <div className="flex flex-col min-h-screen bg-gray-50">
+        <div className="flex flex-col min-h-screen bg-gray-50 pb-16 lg:pb-0">
           {children}
         </div>
+        <StickyMobileCTA />
       </body>
     </html>
   );

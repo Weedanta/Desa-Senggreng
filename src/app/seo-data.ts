@@ -8,15 +8,15 @@ export const staticRoutes = [
     title: "Beranda Desa Senggreng",
     description:
       "Beranda resmi Desa Senggreng yang menampilkan profil desa, wisata, UMKM, dan budaya lokal.",
-    changeFrequency: "weekly",
-    priority: 1,
+    changeFrequency: "weekly" as const,
+    priority: 1.0,
   },
   {
     path: "/tentang",
     title: "Tentang Desa Senggreng",
     description:
       "Sejarah, visi misi, dan profil Desa Senggreng di Kecamatan Sumberpucung, Kabupaten Malang.",
-    changeFrequency: "monthly",
+    changeFrequency: "monthly" as const,
     priority: 0.8,
   },
   {
@@ -24,49 +24,57 @@ export const staticRoutes = [
     title: "Wisata Desa Senggreng",
     description:
       "Daftar destinasi wisata alam dan budaya di Desa Senggreng, Sumberpucung, Malang.",
-    changeFrequency: "weekly",
-    priority: 0.85,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
   },
   {
     path: "/umkm",
     title: "UMKM Desa Senggreng",
     description:
       "Katalog UMKM unggulan Desa Senggreng beserta produk, lokasi, dan kontak pelaku usaha.",
-    changeFrequency: "weekly",
-    priority: 0.85,
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
   },
   {
     path: "/galeri",
     title: "Galeri Desa Senggreng",
     description:
       "Kumpulan foto kegiatan, wisata, dan UMKM di Desa Senggreng, Sumberpucung, Malang.",
-    changeFrequency: "monthly",
-    priority: 0.6,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  },
+  {
+    path: "/coming-soon",
+    title: "Fitur Segera Hadir",
+    description:
+      "Halaman informasi fitur yang akan segera hadir di portal Desa Senggreng.",
+    changeFrequency: "monthly" as const,
+    priority: 0.3,
   },
 ];
 
 export const wisataDetails = [
   {
     slug: "sumber-duren",
-    title: "Sumber Duren",
+    title: "Wisata Sumber Duren",
     description:
-      "Wisata air tawar dengan pemancingan, camping ground, dan pujasera di Dusun Kecopokan.",
+      "Wisata air tawar dengan pemancingan, camping ground, dan pujasera di Dusun Kecopokan, Desa Senggreng.",
   },
   {
     slug: "rowo-klampok",
-    title: "Rowo Klampok",
+    title: "Wisata Rowo Klampok",
     description:
-      "Rowo Klampok, destinasi alam tenang dengan panorama pegunungan di Desa Klampok.",
+      "Rowo Klampok, destinasi alam tenang dengan panorama pegunungan di Desa Klampok, Senggreng.",
   },
   {
     slug: "embung-sumberpucung",
     title: "Embung Sumberpucung",
     description:
-      "Embung Sumberpucung menawarkan wisata air dan budaya nelayan di Dusun Kecepatan.",
+      "Embung Sumberpucung menawarkan wisata air dan budaya nelayan di Dusun Kecepatan, Senggreng.",
   },
   {
     slug: "rajut-indah",
-    title: "Rajut Indah",
+    title: "Wisata Rajut Indah",
     description:
       "Wisata kolam dan kuliner ikan air tawar Rajut Indah di Sengguruh, Sumberpucung.",
   },
@@ -77,7 +85,7 @@ export const umkmDetails = [
     slug: "family-chicken",
     title: "Family Chicken Senggreng",
     description:
-      "Restoran ayam crispy dan geprek favorit warga dengan beragam pilihan sambal.",
+      "Restoran ayam crispy dan geprek favorit warga dengan beragam pilihan sambal nikmat.",
   },
   {
     slug: "warung-biru",
@@ -87,15 +95,15 @@ export const umkmDetails = [
   },
   {
     slug: "kerajinan-anyaman",
-    title: "Kerajinan Anyaman",
+    title: "Kerajinan Anyaman Bu Wasiah",
     description:
       "Anyaman plastik sintetis dan pandan dari pengrajin Desa Senggreng untuk souvenir dan kebutuhan harian.",
   },
   {
     slug: "kotak-makanan",
-    title: "Kerajinan Kotak Makanan",
+    title: "Kerajinan Kotak Makanan Tradisional",
     description:
-      "Wadah kotak makanan tradisional ramah lingkungan dengan bahan berkualitas.",
+      "Wadah kotak makanan tradisional ramah lingkungan dengan bahan berkualitas dari Desa Senggreng.",
   },
 ];
 
