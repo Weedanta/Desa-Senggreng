@@ -3,13 +3,16 @@ import { absoluteUrl, siteOgImage, wisataDetails } from "../../seo-data";
 
 type WisataDetailLayoutProps = {
   children: React.ReactNode;
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({
   params,
-}: WisataDetailLayoutProps): Promise<Metadata> {
-  const detail = wisataDetails.find((item) => item.slug === params.slug);
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const detail = wisataDetails.find((item) => item.slug === slug);
 
   if (!detail) {
     return {
@@ -45,7 +48,7 @@ export async function generateMetadata({
   };
 }
 
-export default function WisataDetailLayout({
+export default async function WisataDetailLayout({
   children,
 }: WisataDetailLayoutProps) {
   return <>{children}</>;
