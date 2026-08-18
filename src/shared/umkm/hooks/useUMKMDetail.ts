@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { DetailContent } from '@/shared/detail/types';
+import FamilyChickenImg from '@/assets/images/UMKM/FamilyChicken.png';
+import WarungBiruImg from '@/assets/images/UMKM/WarungBiru.png';
+import TasAnyamanImg from '@/assets/images/UMKM/TasAnyaman.png';
+import WadahKotakImg from '@/assets/images/UMKM/WadahKotak.png';
 
 export const useUMKMDetail = (id: string) => {
   const [detailData, setDetailData] = useState<DetailContent | null>(null);
@@ -21,7 +25,7 @@ export const useUMKMDetail = (id: string) => {
             title: 'Family Chicken Senggreng',
             category: 'umkm',
             description: 'Family Chicken adalah restoran ayam yang menyediakan berbagai menu seperti ayam crispy, ayam geprek, dengan berbagai varian sambal nikmat. Dengan fasilitas yang nyaman dan harga bersahabat, restoran ini menjadi favorit warga untuk makan bersama, atau sekedar makan siang.',
-            heroImage: require('@/assets/images/UMKM/FamilyChicken.png').default,
+            heroImage: FamilyChickenImg,
             
             videoReview: {
               type: 'iframe',
@@ -40,7 +44,6 @@ export const useUMKMDetail = (id: string) => {
               { id: 'parking', name: 'Parkir Gratis', icon: 'car' },
               { id: 'toilet', name: 'Toilet', icon: 'toilet' },
               { id: 'wifi', name: 'WiFi Gratis', icon: 'wifi' },
-            //   { id: 'ac', name: 'AC', icon: 'air-conditioner' }
             ],
             
             contact: '0812-3456-7890',
@@ -60,7 +63,7 @@ export const useUMKMDetail = (id: string) => {
             title: 'Warung Biru',
             category: 'umkm',
             description: 'Warung legendaris ini hanya menyediakan satu menu, yaitu ikan mujair, namun menjadi favorit warga. Butuh beberapa saat mengantri untuk menikmati lezatnya ikan mujair pedas ataupun goreng yang dipadukan dengan nasi putih dan nasi jagung, juga dilengkapi lalapan segar. Dengan porsi yang cukup untuk membuat kenyang, harga yang ditawarkan juga sangat bersahabat sehingga membuat warung ini menjadi salah satu yang harus dikunjungi oleh para pemburu kuliner.',
-            heroImage: require('@/assets/images/UMKM/WarungBiru.png').default,
+            heroImage: WarungBiruImg,
             
             videoReview: {
               type: 'iframe',
@@ -98,7 +101,7 @@ export const useUMKMDetail = (id: string) => {
             title: 'Kerajinan Anyaman',
             category: 'umkm',
             description: 'Ibu Wasiah merupakan seorang pengrajin anyaman berbahan dasar plastik sintetis dan pandan yang berkualitas. Usaha ini telah berjalan sejak sekitar tahun 2020, yang awalnya merupakan kegiatan sampingan dan kemudian berkembang dengan terlibatnya anggota PKK Desa Senggreng dan melibatkan lebih banyak warga desa sebagai pengrajin. Produk berkualitas ini menjadi favorit warga sebagai item pribadi maupun souvenir dalam acara-acara besar.',
-            heroImage: require('@/assets/images/UMKM/TasAnyaman.png').default,
+            heroImage: TasAnyamanImg,
             
             videoReview: {
               type: 'iframe',
@@ -136,7 +139,7 @@ export const useUMKMDetail = (id: string) => {
             title: 'Kotak Makanan',
             category: 'umkm',
             description: 'Usaha pembuatan wadah kotak makanan tradisional yang menggunakan bahan-bahan alami berkualitas tinggi. Produk ini cocok untuk berbagai kebutuhan seperti kemasan makanan tradisional, souvenir, dan kebutuhan rumah tangga. Dikerjakan dengan teknik tradisional yang dipadukan dengan sentuhan modern.',
-            heroImage: require('@/assets/images/UMKM/WadahKotak.png').default,
+            heroImage: WadahKotakImg,
             
             videoReview: {
               type: 'iframe',
@@ -171,7 +174,7 @@ export const useUMKMDetail = (id: string) => {
         };
 
         // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 800));
+        await new Promise(resolve => setTimeout(resolve, 500));
 
         const data = mockDetailData[id];
         if (data) {
@@ -179,7 +182,7 @@ export const useUMKMDetail = (id: string) => {
         } else {
           setError('Data UMKM tidak ditemukan');
         }
-      } catch (err) {
+      } catch {
         setError('Gagal memuat data UMKM');
       } finally {
         setLoading(false);
