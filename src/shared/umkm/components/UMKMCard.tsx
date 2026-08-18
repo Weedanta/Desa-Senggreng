@@ -50,7 +50,7 @@ const UMKMCard: React.FC<UMKMCardProps> = ({ item, index }) => {
           <div className="relative w-full h-full rounded-xl lg:rounded-2xl overflow-hidden">
             <Image
               src={item.image}
-              alt={item.name}
+              alt={`Produk dan Usaha Unggulan UMKM ${item.name} Desa Senggreng`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"

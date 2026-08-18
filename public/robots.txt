@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /nyoba
+
+Sitemap: https://desa-senggreng.vercel.app/sitemap.xml
+Host: https://desa-senggreng.vercel.app

@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { DetailContent } from '@/shared/detail/types';
+import SumberDurenImg from '@/assets/images/Wisata/SumberDuren.png';
+import RowoKlampokImg from '@/assets/images/Wisata/RowoKlampo.png';
+import EmbungSumberpucungImg from '@/assets/images/Wisata/EmbungSumberPucung.png';
+import RajutIndahImg from '@/assets/images/Wisata/RajutIndah.png';
 
 export const useWisataDetail = (id: string) => {
   const [detailData, setDetailData] = useState<DetailContent | null>(null);
@@ -21,7 +25,7 @@ export const useWisataDetail = (id: string) => {
             title: 'Sumber Duren',
             category: 'wisata',
             description: 'Sumber Duren merupakan salah satu tempat wisata yang berfokus pada konservasi alam dan berlatar belakang pemberdayaan masyarakat di bidang ekonomi, terutama pada sektor perikanan air tawar. Produk unggulan air tawar yang dihasilkan berupa ikan mujair, ikan tombro, dan bandeng tawar yang bisa dinikmati sambil bersantai. Tempat wisata ini dilengkapi dengan fasilitas camping ground, spot pemancingan, panggung utama, dan pujasera.',
-            heroImage: require('@/assets/images/Wisata/SumberDuren.png').default,
+            heroImage: SumberDurenImg,
             
             virtualTour: {
               type: 'iframe',
@@ -58,7 +62,7 @@ export const useWisataDetail = (id: string) => {
             title: 'Rowo Klampok',
             category: 'wisata',
             description: 'Rowo Klampok merupakan destinasi wisata alam yang dikelola bersama oleh pemerintah desa dan masyarakat setempat. Tempat ini menyajikan panorama wisata yang luas dan tenang, memberikan suasana sejuk dan damai bagi para pengunjung. Dikelilingi pegunungan indah dan langit yang memukau, tempat ini cocok untuk melepas penat dari hiruk-pikuk kota.',
-            heroImage: require('@/assets/images/Wisata/RowoKlampo.png').default,
+            heroImage: RowoKlampokImg,
             
             virtualTour: {
               type: 'iframe',
@@ -94,7 +98,7 @@ export const useWisataDetail = (id: string) => {
             title: 'Embung Sumberpucung',
             category: 'wisata',
             description: 'Wisata Embung Sumberpucung yang terletak di Dusun Kecepatan, Sengguruh, Kec. Sumberpucung merupakan destinasi wisata yang menggabungkan keindahan wisata air dari tempat yang menakjubkan. Tempat ini menawarkan pesona alam dan budaya nelayan dalam satu pengalaman yang menarik.',
-            heroImage: require('@/assets/images/Wisata/EmbungSumberPucung.png').default,
+            heroImage: EmbungSumberpucungImg,
             
             virtualTour: {
               type: 'iframe',
@@ -130,7 +134,7 @@ export const useWisataDetail = (id: string) => {
             title: 'Rajut Indah',
             category: 'wisata',
             description: 'Wisata Rajut Indah yang terletak di Dusun Kecepatan, Sengguruh, Kec. Sumberpucung merupakan destinasi wisata yang menggabungkan keindahan wisata kolam dari tempat yang menakjubkan. Tempat ini menawarkan pesona alam dan budaya nelayan dalam satu pengalaman yang menarik.',
-            heroImage: require('@/assets/images/Wisata/RajutIndah.png').default,
+            heroImage: RajutIndahImg,
             
             virtualTour: {
               type: 'iframe',
@@ -163,7 +167,7 @@ export const useWisataDetail = (id: string) => {
         };
 
         // Simulate API call delay
-        await new Promise(resolve => setTimeout(resolve, 800));
+        await new Promise(resolve => setTimeout(resolve, 500));
 
         const data = mockDetailData[id];
         if (data) {
@@ -171,7 +175,7 @@ export const useWisataDetail = (id: string) => {
         } else {
           setError('Data wisata tidak ditemukan');
         }
-      } catch (err) {
+      } catch {
         setError('Gagal memuat data wisata');
       } finally {
         setLoading(false);

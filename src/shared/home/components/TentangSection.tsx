@@ -19,7 +19,7 @@ function TentangSection() {
           <div className="relative w-full min-h-0 max-h-[73vh] flex items-center justify-center shadow-lg rounded-4xl">
             <Image
               src={TentangImage}
-              alt="Kantor Pelayanan Desa Senggreng"
+              alt="Gedung Kantor Pelayanan Pemerintah Desa Senggreng"
               width={0}
               height={0}
               className="w-full h-auto object-contain"

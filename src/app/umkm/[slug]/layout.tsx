@@ -3,13 +3,16 @@ import { absoluteUrl, siteOgImage, umkmDetails } from "../../seo-data";
 
 type UMKMDetailLayoutProps = {
   children: React.ReactNode;
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({
   params,
-}: UMKMDetailLayoutProps): Promise<Metadata> {
-  const detail = umkmDetails.find((item) => item.slug === params.slug);
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const detail = umkmDetails.find((item) => item.slug === slug);
 
   if (!detail) {
     return {
@@ -42,10 +45,16 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${detail.title} | UMKM Desa Senggreng`,
+      description: detail.description,
+      images: [siteOgImage],
+    },
   };
 }
 
-export default function UMKMDetailLayout({
+export default async function UMKMDetailLayout({
   children,
 }: UMKMDetailLayoutProps) {
   return <>{children}</>;

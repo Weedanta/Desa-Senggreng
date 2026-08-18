@@ -2,14 +2,7 @@ import React from "react";
 import SectionHeader from "@/shared/components/section/section";
 
 const ProfileDesa = () => {
-  // Extract video ID from YouTube URL
-  const youtubeUrl =
-    "http://youtube.com/watch?v=X-EK60rmcQs&list=RDX-EK60rmcQs&start_radio=1";
-  const videoId = youtubeUrl.match(
-    /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/
-  )?.[1];
-
-  // Create embed URL
+  // Embed URL profil video resmi desa
   const embedUrl = `https://www.youtube.com/embed/hcSTEswNit8`;
 
   return (

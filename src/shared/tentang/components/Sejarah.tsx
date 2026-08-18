@@ -46,7 +46,8 @@ const Sejarah = () => {
         <div className="flex justify-center mb-8">
           <Image
             src={Line}
-            alt="Line"
+            alt=""
+            aria-hidden="true"
             className="h-auto object-cover"
             draggable={false}
           />

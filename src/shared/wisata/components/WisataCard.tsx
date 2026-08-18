@@ -50,7 +50,7 @@ const WisataCard: React.FC<WisataCardProps> = ({ item, index }) => {
           <div className="relative w-full h-full rounded-xl lg:rounded-2xl overflow-hidden">
             <Image
               src={item.image}
-              alt={item.name}
+              alt={`Destinasi Wisata ${item.name} di Desa Senggreng, Sumberpucung, Malang`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 50vw"

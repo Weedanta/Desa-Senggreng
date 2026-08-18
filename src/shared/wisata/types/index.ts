@@ -1,8 +1,10 @@
+import { StaticImageData } from "next/image";
+
 export interface WisataItem {
   id: number;
   name: string;
   description: string;
-  image: string;
+  image: StaticImageData | string;
   location: string;
   detailLink: string;
 }

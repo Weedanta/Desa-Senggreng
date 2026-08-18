@@ -12,13 +12,13 @@ const Logo = () => (
   <Link href="/" className="flex items-center space-x-3">
     <Image 
       src={LogoDe} 
-      alt="Logo Desa" 
+      alt="Logo Resmi Pemerintah Desa Senggreng" 
       className="w-8 h-8 md:w-12 md:h-12 object-contain" 
       draggable="false"
     />
     <Image 
       src={Title} 
-      alt="Title" 
+      alt="Desa Senggreng Sumberpucung Malang" 
       className="h-8 md:h-12" 
       draggable="false"
     />

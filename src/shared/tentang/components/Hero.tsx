@@ -17,7 +17,7 @@ const Hero = () => {
       >
         <Image
           src={HeroImage || "/placeholder.svg"}
-          alt="Hero Tentang"
+          alt="Panorama Alam dan Lingkungan Hijau Desa Senggreng Sumberpucung"
           className="w-full h-64 sm:h-80 md:h-96 lg:h-auto object-cover"
           draggable={false}
           priority
