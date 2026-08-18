@@ -1,5 +1,6 @@
 export const siteUrl = "https://desa-senggreng.vercel.app";
-export const siteOgImage =
+export const siteOgImage = "https://desa-senggreng.vercel.app/og-image.png";
+export const siteBannerImage =
   "https://res.cloudinary.com/matic-malang/image/upload/v1691651913/z0x7gz6l9pgulxyc4mdv.jpg";
 
 export const staticRoutes = [

@@ -11,7 +11,8 @@ const poppins = Poppins({
 });
 
 const metadataBaseUrl = "https://desa-senggreng.vercel.app";
-const ogImage =
+const ogImage = "https://desa-senggreng.vercel.app/og-image.png";
+const bannerImage =
   "https://res.cloudinary.com/matic-malang/image/upload/v1691651913/z0x7gz6l9pgulxyc4mdv.jpg";
 
 export const viewport: Viewport = {
@@ -44,11 +45,11 @@ const organizationJsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(metadataBaseUrl),
   title: {
-    default: "Profil Desa Senggreng | Wisata & UMKM Sumberpucung Malang",
+    default: "Desa Senggreng | Profil, Wisata & UMKM Sumberpucung Malang",
     template: "%s | Desa Senggreng",
   },
   description:
-    "Portal resmi Desa Senggreng, Sumberpucung, Malang. Jelajahi keindahan wisata alam (Sumber Duren, Rowo Klampok), katalog produk UMKM warga, sejarah, budaya, dan galeri desa.",
+    "Website resmi Desa Senggreng — jelajahi potensi wisata alam (Sumber Duren, Rowo Klampok), katalog produk UMKM lokal, sejarah, budaya, dan galeri kegiatan warga Desa Senggreng, Sumberpucung, Malang.",
   keywords: [
     "Desa Senggreng",
     "Senggreng",
@@ -100,9 +101,9 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
-    title: "Profil Desa Senggreng | Wisata & UMKM Sumberpucung Malang",
+    title: "Desa Senggreng | Profil, Wisata & UMKM Sumberpucung Malang",
     description:
-      "Website resmi Desa Senggreng, Sumberpucung, Malang. Eksplorasi wisata alam Sumber Duren, Rowo Klampok, produk UMKM lokal, dan kearifan budaya desa.",
+      "Website resmi Desa Senggreng — jelajahi potensi wisata alam, katalog produk UMKM lokal, kebudayaan tradisional, dan pelayanan Desa Senggreng, Sumberpucung, Malang.",
     url: metadataBaseUrl,
     siteName: "Desa Senggreng",
     locale: "id_ID",
@@ -110,6 +111,13 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImage,
+        width: 512,
+        height: 512,
+        alt: "Logo Resmi Desa Senggreng",
+        type: "image/png",
+      },
+      {
+        url: bannerImage,
         width: 1200,
         height: 630,
         alt: "Portal Resmi Pemerintah Desa Senggreng, Sumberpucung, Malang",
@@ -119,7 +127,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Profil Desa Senggreng | Wisata & UMKM Sumberpucung Malang",
+    title: "Desa Senggreng | Profil, Wisata & UMKM Sumberpucung Malang",
     description:
       "Website resmi Desa Senggreng: potensi wisata alam Sumber Duren, Rowo Klampok, katalog produk UMKM lokal, dan budaya desa.",
     images: [ogImage],
@@ -139,6 +147,8 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
+        <link rel="image_src" href={ogImage} />
+        <meta property="og:image:secure_url" content={ogImage} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
