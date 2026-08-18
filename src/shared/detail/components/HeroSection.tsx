@@ -27,7 +27,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       >
         <Image
           src={heroImage}
-          alt={`Hero ${title}`}
+          alt={`Foto Panorama Keindahan ${title} Desa Senggreng`}
           className="w-full h-[60vh] object-cover"
           draggable={false}
           priority

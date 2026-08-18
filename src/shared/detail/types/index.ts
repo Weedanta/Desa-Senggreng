@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface Facility {
   id: string;
   name: string;
@@ -26,7 +28,7 @@ export interface DetailContent {
   title: string;
   description: string;
   category: "wisata" | "umkm";
-  heroImage: string;
+  heroImage: StaticImageData | string;
 
   // Sections
   virtualTour?: MediaContent;

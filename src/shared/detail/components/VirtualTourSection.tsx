@@ -2,6 +2,7 @@
 
 import SectionHeader from "@/shared/components/section/section";
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface MediaContent {
@@ -52,11 +53,15 @@ const VirtualTourSection: React.FC<VirtualTourSectionProps> = ({
     }
     
     return (
-      <img
-        src={media.url}
-        alt={media.title || title}
-        className="w-full h-full object-cover rounded-lg"
-      />
+      <div className="relative w-full h-full">
+        <Image
+          src={media.url}
+          alt={`Dokumentasi visual virtual tour ${media.title || title} Desa Senggreng`}
+          fill
+          unoptimized
+          className="object-cover rounded-lg"
+        />
+      </div>
     );
   };
 
