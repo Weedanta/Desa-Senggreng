@@ -111,17 +111,10 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImage,
-        width: 512,
-        height: 512,
-        alt: "Logo Resmi Desa Senggreng",
-        type: "image/png",
-      },
-      {
-        url: bannerImage,
         width: 1200,
         height: 630,
-        alt: "Portal Resmi Pemerintah Desa Senggreng, Sumberpucung, Malang",
-        type: "image/jpeg",
+        alt: "Panorama dan Potensi Desa Senggreng, Sumberpucung, Malang",
+        type: "image/png",
       },
     ],
   },
