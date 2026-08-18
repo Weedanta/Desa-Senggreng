@@ -12,8 +12,6 @@ const poppins = Poppins({
 
 const metadataBaseUrl = "https://desa-senggreng.vercel.app";
 const ogImage = "https://desa-senggreng.vercel.app/og-image.png";
-const bannerImage =
-  "https://res.cloudinary.com/matic-malang/image/upload/v1691651913/z0x7gz6l9pgulxyc4mdv.jpg";
 
 export const viewport: Viewport = {
   themeColor: "#007ee8",
